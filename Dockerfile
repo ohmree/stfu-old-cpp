@@ -31,11 +31,12 @@ ENV LC_CTYPE 'en_US.UTF-8'
 COPY --chown=user . /app/
 
 USER user
+WORKDIR /app
 
-RUN cd /app/pkgbuilds/qt5-jsonserializer-minimal && \
+RUN cd pkgbuilds/qt5-jsonserializer-minimal && \
     makepkg --needed --noconfirm --noprogressbar --nocheck -sCci
 RUN paru -Syu --needed --noconfirm --noprogressbar --nocheck qdep xmake cmake p7zip
-RUN cd /app/pkgbuilds/qt5-restclient-minimal && \
+RUN cd pkgbuilds/qt5-restclient-minimal && \
     makepkg --needed --noconfirm --noprogressbar --nocheck -sCci
 
 RUN xmake repo --update
