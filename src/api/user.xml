@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="restbuilder.xsd"?>
+<RestGadget name="User">
+	<Include local="false">optional</Include>
+	<Property key="id" type="QString"/>
+	<Property key="login" type="QString"/>
+	<Property key="display_name" type="QString"/>
+	<Property key="type" type="QString"/>
+	<Property key="broadcaster_type" type="QString"/>
+	<Property key="description" type="QString"/>
+	<Property key="profile_image_url" type="QString"/>
+	<Property key="offline_image_url" type="QString"/>
+	<Property key="view_count" type="uint"/>
+	<Property key="email" type="std::optional&lt;QString&gt;"/>
+	<Property key="created_at" type="QString"/>
+</RestGadget>

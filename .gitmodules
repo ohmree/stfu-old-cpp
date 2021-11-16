@@ -1,0 +1,3 @@
+[submodule "vendor/qcoro"]
+	path = vendor/qcoro
+	url = git@github.com:danvratil/qcoro.git
