@@ -82,6 +82,7 @@ package_end()
 add_requires("cmake::Qt5RestClientAuth", "qcoro")
 
 target("stfu")
+    set_kind("shared")
     add_rules("qt.shared", "restbuilder")
     add_packages("cmake::Qt5RestClientAuth", "qcoro")
     add_files("src/*.cpp")
